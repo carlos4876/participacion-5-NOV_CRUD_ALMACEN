@@ -3,7 +3,6 @@ import sqlite3
 
 app = Flask(__name__)
 
-# Función para inicializar la base de datos
 def init_database():
     conn = sqlite3.connect("almacen.db")
     cursor = conn.cursor()
@@ -18,7 +17,6 @@ def init_database():
     conn.commit()
     conn.close()
 
-# Inicializa la base de datos al inicio
 init_database()
 
 @app.route("/")
